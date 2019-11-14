@@ -1,0 +1,11 @@
+useDynLib(SClineager)
+exportPattern("^[[:alpha:]]+")
+
+importFrom("MCMCpack", "riwish")
+importFrom("vioplot", "vioplot")
+importFrom("gplots", "heatmap.2")
+importFrom("grDevices", "dev.off", "pdf")
+importFrom("graphics", "boxplot", "lines", "par", "plot", "text",
+             "title")
+importFrom("stats", "aggregate", "density", "median", "quantile", "sd")
+importFrom("utils", "read.table")

@@ -1,0 +1,17 @@
+Package: SClineager
+Type: Package
+Title: Tracing lineage of single cells via genetic variants based on a
+        Bayesian Hierarchical modeling
+Version: 1.0
+Date: 2019-11-09
+Author: Seongoh Park [aut, cre], Tao Wang [aut, cre], Tianshi Lu [aut]
+Maintainer: Seongoh Park <seongohpark6@gmail.com>
+Description: We developed a Bayesian hierarchical model that performs lineage tracing of single cells based on genetic markers. The single cell variants are called from single cell sequencing data. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. 
+License: GPL-3
+Encoding: UTF-8
+Imports: Rcpp (>= 1.0.2), MCMCpack, vioplot, gplots
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 6.1.1
+NeedsCompilation: yes
+Packaged: 2019-11-14 15:22:12 UTC; PSO
+Built: R 3.5.2; x86_64-apple-darwin15.6.0; 2019-11-14 15:22:25 UTC; unix
