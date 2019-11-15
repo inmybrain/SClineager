@@ -1,5 +1,0 @@
-explore_sclineager      Exploratory analysis by visualization
-read_sclineager         Read datsets for SClineager
-run_sclineager          An wrapper function for running SClineager
-sclineager_gibbs        An internal function for Gibbs sampling
-sclineager_internal     The Gibbs sampler for SClineager
