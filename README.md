@@ -1,8 +1,9 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-<!-- To add a badge  -->
-<!-- [![Travis-CI Build Status](https://travis-ci.org/geanders/countyweather.svg?branch=master)](https://travis-ci.org/geanders/countyweather) -->
-<!-- [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countyweather)](https://cran.r-project.org/package=countyweather) -->
+<!-- README.md is generated from README.Rmd. Please edit .Rmd file -->
+![QBRC\_logo](QBRC.jpg)
+
+Please visit our website for more bioinformatics tools: <https://qbrc.swmed.edu/labs/wanglab>
+
 SClineager
 ==========
 
