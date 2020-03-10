@@ -167,6 +167,7 @@ for (folder in c(301, 304)){
     folder = file_out,
     categories = categories,
     max_iter = max_iter,
+    keep_genes = NULL,
     mask_genes = mask_genes,
     vaf_offset = vaf_offset,
     dfreedom = dfreedom,
