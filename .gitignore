@@ -96,3 +96,12 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/r,macos,windows
 .Rproj.user
+
+
+### README files ###
+README.Rmd
+README.log
+
+
+*.jpg
+*.png
