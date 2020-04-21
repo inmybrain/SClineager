@@ -5,7 +5,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit .Rmd file -->
 
-![QBRC_logo](QBRC.jpg)
+![QBRC_logo](./fig/QBRC.jpg)
 
 Please visit our website for more bioinformatics tools: https://qbrc.swmed.edu/labs/wanglab
 
@@ -305,7 +305,7 @@ As a result, `results.RData` and `imputation_results.pdf` are generated under ea
 
 ## Another toy example with simulated data
 
-You can reach one of toy datasets used in our simulation study through [this link](), which points to the folder `data` of this repository.
+You can reach one of toy datasets used in our simulation study through [this link](https://github.com/inmybrain/SClineager/tree/master/data), which points to the folder `data` of this repository.
 We provide this small toy dataset because the runtime will be very short.
 
 
@@ -370,7 +370,7 @@ grid_arrange_shared_legend(gg_fig + ggtitle("Estimated"),
                            nrow = 1, 
                            position = "top")
 ```
-![heatmap_VAF](toy_VAF.png)
+![heatmap_VAF](./fig/toy_VAF.png)
 
 
 

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit .Rmd file -->
 
-![QBRC\_logo](QBRC.jpg)
+![QBRC\_logo](./fig/QBRC.jpg)
 
 Please visit our website for more bioinformatics tools:
 <https://qbrc.swmed.edu/labs/wanglab>
@@ -419,8 +419,9 @@ under each mutation folder.
 ## Another toy example with simulated data
 
 You can reach one of toy datasets used in our simulation study through
-[this link](), which points to the folder `data` of this repository. We
-provide this small toy dataset because the runtime will be very short.
+[this link](https://github.com/inmybrain/SClineager/tree/master/data),
+which points to the folder `data` of this repository. We provide this
+small toy dataset because the runtime will be very short.
 
 The main function of *SClineager* is `sclineager_internal`, which runs
 the Bayesian sampling with mutations and coverage inputs. The sampling
@@ -489,7 +490,7 @@ grid_arrange_shared_legend(gg_fig + ggtitle("Estimated"),
                            position = "top")
 ```
 
-![heatmap\_VAF](toy_VAF.png)
+![heatmap\_VAF](./fig/toy_VAF.png)
 
 ## Notes
 
