@@ -13,4 +13,4 @@ Imports: Rcpp (>= 1.0.2), MCMCpack, vioplot, gplots
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.1.1
 NeedsCompilation: yes
-Packaged: 2020-03-10 22:07:32 UTC; PSO
+Packaged: 2020-04-21 13:03:58 UTC; PSO

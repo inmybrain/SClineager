@@ -4,7 +4,7 @@
 \alias{run_sclineager}
 \title{An wrapper function for running SClineager}
 \usage{
-run_sclineager(file_in, folder, categories, max_iter, keep_genes = NULL,
+run_sclineager(file_in, folder, categories, max_iter, keep_genes = "all",
   mask_genes = NULL, vaf_offset, dfreedom, skip_common, psi = NULL,
   control = NULL, save = FALSE)
 }

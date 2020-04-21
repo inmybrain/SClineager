@@ -40,9 +40,8 @@ read_sclineager: warning in read.table(file, header = F,
   stringsAsFactors = F, sep = "\t", comment = ""): partial argument
   match of 'comment' to 'comment.char'
 explore_sclineager: no visible binding for global variable ‘results’
-run_sclineager: no visible binding for global variable ‘genes_keep’
 Undefined global functions or variables:
-  genes_keep results
+  results
 * checking Rd files ... OK
 * checking Rd metadata ... OK
 * checking Rd cross-references ... OK

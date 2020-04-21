@@ -163,7 +163,7 @@ sclineager_internal <- function(mutations_mat,
 #' # See the github page https://github.com/inmybrain/SClineager.
 #' @importFrom gplots heatmap.2
 #' @export
-run_sclineager<-function(file_in,folder,categories,max_iter, keep_genes = NULL, mask_genes = NULL, vaf_offset,
+run_sclineager<-function(file_in,folder,categories,max_iter, keep_genes = "all", mask_genes = NULL, vaf_offset,
                          dfreedom,skip_common,psi=NULL,control=NULL, save = FALSE)
 {
   ########  set up environment  #################
@@ -180,8 +180,12 @@ run_sclineager<-function(file_in,folder,categories,max_iter, keep_genes = NULL, 
   annotation=annotation[keep,]
   coverage_mat=coverage_mat[keep,]
   
-  # filter by genes_keep (in) and mask_genes (out)
-  keep = (annotation$Gene.refGene %in% genes_keep) & (!(annotation$Gene.refGene %in% mask_genes))
+  # filter by keep_genes (in) and mask_genes (out)
+  if(keep_genes == "all"){
+    keep = !(annotation$Gene.refGene %in% mask_genes)
+  } else{
+    keep = (annotation$Gene.refGene %in% keep_genes) & (!(annotation$Gene.refGene %in% mask_genes))
+  }
   mutations_mat=mutations_mat[keep,]
   annotation=annotation[keep,]
   coverage_mat=coverage_mat[keep,]
