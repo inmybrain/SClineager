@@ -1,82 +1,49 @@
 
 <!-- README.md is generated from README.Rmd. Please edit .Rmd file -->
-
 ![QBRC\_logo](./fig/QBRC.jpg)
 
-Please visit our website for more bioinformatics tools:
-<https://qbrc.swmed.edu/labs/wanglab>
+Please visit our website for more bioinformatics tools: <https://qbrc.swmed.edu/labs/wanglab>
 
-# SClineager
+SClineager
+==========
 
-This is a README file of the R package *SClineager*. In our paper, not
-yet available online, we develop a Bayesian hierarchical model that
-performs lineage tracing of single cells based on genetic markers.
-Single cell variant calling has two inherent issues: (1) low coverage on
-many positions in many cells and (2) allelic bias due to true
-monoallelic expression in single cells or due to sampling bias. This
-algorithm infers genetic trajectories of cells by taking these two
-issues into account. More details about the structure of the data can be
-found in the example dataset that goes along with this R package. The
-details of the Bayesian model can be found in our upcoming paper.
-Detailed usage instructions can be found in the function manual. Here we
-provide a basic workflow.
+This is a README file of the R package *SClineager*. In our paper [available in bioRxiv](https://www.biorxiv.org/content/10.1101/2020.01.01.892562v1), we develop a Bayesian hierarchical model that performs lineage tracing of single cells based on genetic markers. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. Detailed usage instructions can be found in the function manual. Here we provide a basic workflow.
 
-## Configuration
+Configuration
+-------------
 
-  - For this exposition, *Rcpp* ver 1.0.2, *MCMCpack* ver 1.4.5,
-    *vioplot* ver 0.3.4, *gplots* ver 3.0.3 are used.
+-   For this exposition, *Rcpp* ver 1.0.2, *MCMCpack* ver 1.4.5, *vioplot* ver 0.3.4, *gplots* ver 3.0.3 are used.
 
-  - *SClineager* ver 1.10 is performed in R ver 3.6.2 interfaced with a
-    MacBook Pro with a 3.0 GHz Dual Core Intel Core i7 and 16 GB RAM.
+-   *SClineager* ver 1.10 is performed in R ver 3.6.2 interfaced with a MacBook Pro with a 3.0 GHz Dual Core Intel Core i7 and 16 GB RAM.
 
-## Installation of the package
+Installation of the package
+---------------------------
 
-To install our package, you may simply execute the following codes. The
-installation will take about a minute.
+To install our package, you may simply execute the following codes. The installation will take about a minute.
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("inmybrain/SClineager", subdir = "SClineager") # don't forget to specify subdir!
 ```
 
-If you come across a problem like
-[this](https://github.com/r-lib/remotes/issues/130), please refer to
-[this
-answer](https://github.com/r-lib/remotes/issues/130#issuecomment-423830669)
-in that issue.
+If you come across a problem like [this](https://github.com/r-lib/remotes/issues/130), please refer to [this answer](https://github.com/r-lib/remotes/issues/130#issuecomment-423830669) in that issue.
 
 <!-- Or you can install the source file using the command line after downloading it from [here](XXX) (NOT AVAILABLE NOW); -->
-
 <!-- ```{bash, eval = FALSE} -->
-
 <!-- R CMD INSTALL BayesianMIR_1.0.tar.gz -->
-
 <!-- ``` -->
-
 ### Dependencies
 
-  - To install *SClineager*, you will need the following R packages (and
-    their dependencies): *Rcpp* (\>= 1.0.2), *MCMCpack*, *vioplot*,
-    *gplots*. This information is specified in DESCRIPTION file in
-    ‘’SClineager’’ folder
+-   To install *SClineager*, you will need the following R packages (and their dependencies): *Rcpp* (&gt;= 1.0.2), *MCMCpack*, *vioplot*, *gplots*. This information is specified in DESCRIPTION file in ''SClineager'' folder
 
-  - No specific operating system is required.
+-   No specific operating system is required.
 
 <!-- ## Download the example dataset -->
-
 <!-- The dataset used in the following illustration of _SClineager_ can be downloaded in [here](?). -->
+A basic example of using the package
+------------------------------------
 
-## A basic example of using the package
-
-The names of folders in this example can be anything. Just change the
-codes to read from the correct directories. The names and formats of the
-.txt files have to be the same. First, your working directory should be
-at *test* that contains two sub-folders *mutations* and *processed*.
-Please see the following directory structure used in our example. The
-*mutations* folder contains the mutation data of different cells (such
-as P301\_9\_5) of different samples (such as 301). The *processed*
-folder will need to contain empty sub-folders corresponding to the
-sample names.
+The names of folders in this example can be anything. Just change the codes to read from the correct directories. The names and formats of the .txt files have to be the same. First, your working directory should be at *test* that contains two sub-folders *mutations* and *processed*. Please see the following directory structure used in our example. The *mutations* folder contains the mutation data of different cells (such as P301\_9\_5) of different samples (such as 301). The *processed* folder will need to contain empty sub-folders corresponding to the sample names.
 
 ``` bash
 ── test
@@ -108,8 +75,7 @@ sample names.
 
 ### Read data
 
-We read each mutation information using `read_sclineager`, which takes
-about 30 seconds.
+We read each mutation information using `read_sclineager`, which takes about 30 seconds.
 
 ``` r
 coverage_cutoff <- 3
@@ -134,20 +100,12 @@ for (folder in c(301, 304)){
 }
 ```
 
-After running the above code, we get for each mutation a RData file that
-will be used in the SClineager model and a pdf file that visualizes data
-information. `cleaned.RData` contains an R object named `results`, which
-has the following information:
+After running the above code, we get for each mutation a RData file that will be used in the SClineager model and a pdf file that visualizes data information. `cleaned.RData` contains an R object named `results`, which has the following information:
 
-  - `mutations_mat` : raw matrix of variants and VAFs
-  - `runinfo` : same as the `runinfo` parameter in the input, but
-    contains only cells found in `mutations_mat` in the same order
-  - `annotation` : annotation information of the variants in
-    `mutations_mat`
-  - `coverage_mat` : coverage data of the same cells and same variants
-    as in `mutations_mat`
-
-<!-- end list -->
+-   `mutations_mat` : raw matrix of variants and VAFs
+-   `runinfo` : same as the `runinfo` parameter in the input, but contains only cells found in `mutations_mat` in the same order
+-   `annotation` : annotation information of the variants in `mutations_mat`
+-   `coverage_mat` : coverage data of the same cells and same variants as in `mutations_mat`
 
 ``` bash
 ── processed
@@ -161,8 +119,7 @@ has the following information:
 
 ### Exploratory analysis
 
-Basic data visualization is performed through `explore_sclineager`,
-which takes less than a second.
+Basic data visualization is performed through `explore_sclineager`, which takes less than a second.
 
 ``` r
 folders <- list.files("./processed", full.names = T)
@@ -171,20 +128,13 @@ explore_sclineager(folders, coverage_cutoff, "./mCelSeq2_exploratory.pdf")
 
 ### Run SClineager
 
-The main function `run_sclineager` performs the MCMC sampling and
-returns estimation results. The analysis has to be performed for each
-sample independently. The whole procedures take less than a few seconds.
-The results will be saved as `results.RData` in `file_out`, which
-contains an R object named `results` with the following attributes:
+The main function `run_sclineager` performs the MCMC sampling and returns estimation results. The analysis has to be performed for each sample independently. The whole procedures take less than a few seconds. The results will be saved as `results.RData` in `file_out`, which contains an R object named `results` with the following attributes:
 
-  - `genotype_mat` : inferred VAF matrix
-  - `genotype_mat_orig` : the raw VAF matrix
-  - `sigma` : inferred covariance matrix
-  - `genotype_mat_all` and `sigma_all`: sampled parameters at each
-    iteration
-  - `runinfo`, `annotation` : same as above
-
-<!-- end list -->
+-   `genotype_mat` : inferred VAF matrix
+-   `genotype_mat_orig` : the raw VAF matrix
+-   `sigma` : inferred covariance matrix
+-   `genotype_mat_all` and `sigma_all`: sampled parameters at each iteration
+-   `runinfo`, `annotation` : same as above
 
 ``` r
 for (folder in c(301, 304)){
@@ -227,8 +177,7 @@ for (folder in c(301, 304)){
 }
 ```
 
-As a result, `results.RData` and `imputation_results.pdf` are generated
-under each mutation folder.
+As a result, `results.RData` and `imputation_results.pdf` are generated under each mutation folder.
 
 ``` bash
 ── processed
@@ -245,187 +194,97 @@ under each mutation folder.
 ```
 
 <!-- ### Visualization -->
-
 <!-- Using the fitted model, a scatter plot for multiple instance regression can be provided as follows. -->
-
 <!-- ```{r, eval = TRUE} -->
-
 <!-- MIScatterPlot(tidydata = tidydata,  -->
-
 <!--               bag_size = 5, -->
-
 <!--               true_primary = lapply(1:tidydata$nsample, function(x) rep(c(T,F), c(1, ninst - 1))),  -->
-
 <!--               pred_primary = lapply(split(BMIR_fit$pip[,1], tidydata$membership), function(x) rank(-x, ties.method = "min") <= 1) -->
-
 <!-- ) -->
-
 <!-- ``` -->
-
 <!-- Using slightl modified `ggmcmc::ggs_density` function, we can have the Bayesian inference. -->
-
 <!-- ```{r, eval = TRUE} -->
-
 <!-- # install.packages("ggmcmc") -->
-
 <!-- library("ggmcmc") -->
-
 <!-- ggs_density <- function (D, ncol, family = NA, rug = FALSE, hpd = FALSE, greek = FALSE)  -->
-
 <!--   ## - ncol is added! -->
-
 <!--   ## - ci -> ggmcmc::ci -->
-
 <!--   ## - [Low, High] interval is commented -->
-
 <!-- { -->
-
 <!--   if (!is.na(family)) { -->
-
 <!--     D <- get_family(D, family = family) -->
-
 <!--   } -->
-
 <!--   if (attributes(D)$nChains <= 1) { -->
-
 <!--     f <- ggplot(D, aes(x = value)) -->
-
 <!--   } -->
-
 <!--   else { -->
-
 <!--     f <- ggplot(D, aes(x = value, colour = as.factor(Chain),  -->
-
 <!--                        fill = as.factor(Chain))) -->
-
 <!--   } -->
-
 <!--   f <- f + geom_density(alpha = 0.3) + scale_fill_discrete(name = "Chain") +  -->
-
 <!--     scale_colour_discrete(name = "Chain") -->
-
 <!--   if (!greek) { -->
-
 <!--     f <- f + facet_wrap(~Parameter, ncol = ncol, scales = "free") -->
-
 <!--   } -->
-
 <!--   else { -->
-
 <!--     f <- f + facet_wrap(~Parameter, ncol = ncol, scales = "free",  -->
-
 <!--                         labeller = label_parsed) -->
-
 <!--   } -->
-
 <!--   if (rug)  -->
-
 <!--     f <- f + geom_rug(alpha = 0.1) -->
-
 <!--   if (hpd) { -->
-
 <!--     ciD <- ggmcmc::ci(D) -->
-
 <!--     f <- f + geom_segment(data = ciD, size = 2, color = "blue", inherit.aes = FALSE,  -->
-
 <!--                           aes(x = low, xend = high, y = 0, yend = 0))  -->
-
 <!--     # +geom_segment( -->
-
 <!--     #   data = ciD, -->
-
 <!--     #   size = 1, -->
-
 <!--     #   inherit.aes = FALSE, -->
-
 <!--     #   aes( -->
-
 <!--     #     x = Low, -->
-
 <!--     #     xend = High, -->
-
 <!--     #     y = 0, -->
-
 <!--     #     yend = 0 -->
-
 <!--     #   ) -->
-
 <!--     # ) -->
-
 <!--   } -->
-
 <!--   return(f) -->
-
 <!-- } -->
-
 <!-- ggs_mcmc <- ggmcmc::ggs(BMIR_fit$mcmclist) -->
-
 <!-- ggs_mcmc$Parameter <- factor(ggs_mcmc$Parameter, labels = c(paste0("coef", 1:(nfeature + 1)), "sig2_error")) -->
-
 <!-- ggs_density(ggs_mcmc %>%  -->
-
 <!--               filter(Iteration > ntotal * 1 / 4),  -->
-
 <!--             ncol = 2, -->
-
 <!--             hpd = TRUE) +  -->
-
 <!--   geom_vline(data = data.frame(Parameter = c(paste0("coef", 1:(nfeature + 1)), "sig2_error"), -->
-
 <!--                                true_val = c(rep(2, 1 + nfeature), 1)), -->
-
 <!--              aes(xintercept = true_val), color = "red") + -->
-
 <!--   labs(x = "Value", y = "Density") +  -->
-
 <!--   theme(axis.text.y = element_blank(), -->
-
 <!--         axis.ticks.y = element_blank()) -->
-
 <!-- ``` -->
-
 <!-- ### Prediction in new bags -->
-
 <!-- When new bags (i.e. without labels) are given, we can predict both labels and primary instances using `predict.BMIR`. -->
-
 <!-- ```{r, eval = TRUE} -->
-
 <!-- pred_fit <- predict.BMIR(BMIRchain = BMIR_fit$mcmclist$Chain1,  -->
-
 <!--                          pip = BMIR_fit$pip[,1],  -->
-
 <!--                          tidydata = tidydata,  -->
-
 <!--                          newtidydata = newtidydata,  -->
-
 <!--                          k = 1) -->
-
 <!-- ``` -->
-
 <!-- Let us see how prediction works. -->
-
 <!-- ```{r, eval = TRUE} -->
-
 <!-- ggplot(data = data.frame(pred = pred_fit$newtidydata$label,  -->
-
 <!--                          true = label[-(1:100)]),  -->
-
 <!--        mapping = aes(x = pred, y = true)) +  -->
-
 <!--   geom_point() + geom_abline(intercept = 0, slope = 1, color = "red") -->
-
 <!-- ``` -->
+Another toy example with simulated data
+---------------------------------------
 
-## Another toy example with simulated data
+You can reach one of toy datasets used in our simulation study through [this link](https://github.com/inmybrain/SClineager/tree/master/data), which points to the folder `data` of this repository. We provide this small toy dataset because the runtime will be very short.
 
-You can reach one of toy datasets used in our simulation study through
-[this link](https://github.com/inmybrain/SClineager/tree/master/data),
-which points to the folder `data` of this repository. We provide this
-small toy dataset because the runtime will be very short.
-
-The main function of *SClineager* is `sclineager_internal`, which runs
-the Bayesian sampling with mutations and coverage inputs. The sampling
-with this dataset takes about 5-6 seconds.
+The main function of *SClineager* is `sclineager_internal`, which runs the Bayesian sampling with mutations and coverage inputs. The sampling with this dataset takes about 5-6 seconds.
 
 ``` r
 load("./data/toy_data.RData")
@@ -442,8 +301,7 @@ fit_scl <-
   )
 ```
 
-The following code block is to generate heatmaps for raw and fitted
-VAFs.
+The following code block is to generate heatmaps for raw and fitted VAFs.
 
 ``` r
 library("reshape2") # convert a wide matrix to a long matrix
@@ -492,41 +350,38 @@ grid_arrange_shared_legend(gg_fig + ggtitle("Estimated"),
 
 ![heatmap\_VAF](./fig/toy_VAF.png)
 
-## Notes
+CTCL dataset
+------------
 
-The variant calling of the single cell sequencing data should be
-performed by our variant calling pipeline:
-<https://github.com/tianshilu/QBRC-Somatic-Pipeline>. One should use the
-“tumor-only” mode for calling mutations, and set “keep\_coverage” (keep
-coverage data) to 1. Also, please change the Perl script somatic.pl so
-that `$skip_recal=1` (skip base recalibration), and `$lofreq=1` (use
-lofreq for scATAC-seq) or =0 (use strelka for scRNA-Seq). Alternatively,
-the users can formulate their own variant calling results into the
-format of our pipeline’s results. Please refer to the example datasets
-incorporated in this R package for our format.
+We also provide this CTCL dataset from the Mimitou et al. publication [\[1\]](#1), which we processed and used in our manuscript.
+
+References
+----------
+
+<a id="1">\[1\]</a> Mimitou, E. P. et al. (2019) Multiplexed detection of proteins, transcriptomes, clonotypes and CRISPR perturbations in single cells. Nat. Methods 16, 409–412.
+
+Notes
+-----
+
+The variant calling of the single cell sequencing data should be performed by our variant calling pipeline: <https://github.com/tianshilu/QBRC-Somatic-Pipeline>. One should use the "tumor-only" mode for calling mutations, and set "keep\_coverage" (keep coverage data) to 1. Also, please change the Perl script somatic.pl so that `$skip_recal=1` (skip base recalibration), and `$lofreq=1` (use lofreq for scATAC-seq) or =0 (use strelka for scRNA-Seq). Alternatively, the users can formulate their own variant calling results into the format of our pipeline’s results. Please refer to the example datasets incorporated in this R package for our format.
 
 <!-- - For available covariance structures, see the help page; -->
-
 <!-- ```{r, eval = FALSE} -->
-
 <!-- ?Mclust_SEP_cpp -->
-
 <!-- ``` -->
-
 <!-- - As for initial assignment of cluster membership, each sample is assigned randomly to clusters. -->
-
-## Issues
+Issues
+------
 
 We are happy to troubleshoot any issue with the package;
 
-  - please contact to the maintainer by <seongohpark6@gmail.com>, or
+-   please contact to the maintainer by <seongohpark6@gmail.com>, or
 
-  - please open an issue in the github repository.
+-   please open an issue in the github repository.
 
 <!-- ## Error and warning messages you may get -->
-
 <!-- ## References  -->
-
-## License
+License
+-------
 
 GPL 3.0

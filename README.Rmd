@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 # SClineager
 
-This is a README file of the R package _SClineager_. In our paper, not yet available online, we develop a Bayesian hierarchical  model that performs lineage tracing of single cells based on genetic markers. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. Detailed usage instructions can be found in the function manual. Here we provide a basic workflow.
+This is a README file of the R package _SClineager_. In our paper [available in bioRxiv](https://www.biorxiv.org/content/10.1101/2020.01.01.892562v1), we develop a Bayesian hierarchical  model that performs lineage tracing of single cells based on genetic markers. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. Detailed usage instructions can be found in the function manual. Here we provide a basic workflow.
 
 
 ## Configuration
@@ -372,7 +372,14 @@ grid_arrange_shared_legend(gg_fig + ggtitle("Estimated"),
 ```
 ![heatmap_VAF](./fig/toy_VAF.png)
 
+## CTCL dataset
 
+We also provide this CTCL dataset from the Mimitou et al. publication [[1]](#1), which we processed and used in our manuscript.
+
+
+## References
+<a id="1">[1]</a> 
+Mimitou, E. P. et al. (2019) Multiplexed detection of proteins, transcriptomes, clonotypes and CRISPR perturbations in single cells. Nat. Methods 16, 409–412.
 
 ## Notes
 
