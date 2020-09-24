@@ -363,7 +363,7 @@ References
 Notes
 -----
 
-The variant calling of the single cell sequencing data should be performed by our variant calling pipeline: <https://github.com/tianshilu/QBRC-Somatic-Pipeline>. One should use the "tumor-only" mode for calling mutations, and set "keep\_coverage" (keep coverage data) to 1. Also, please change the Perl script somatic.pl so that `$skip_recal=1` (skip base recalibration), and `$lofreq=1` (use lofreq for scATAC-seq) or =0 (use strelka for scRNA-Seq). Alternatively, the users can formulate their own variant calling results into the format of our pipeline’s results. Please refer to the example datasets incorporated in this R package for our format.
+The variant calling of the single cell sequencing data should be performed by our variant calling pipeline: <https://github.com/tianshilu/QBRC-Somatic-Pipeline> (temporarily closed as of 20.09.24). One should use the "tumor-only" mode for calling mutations, and set "keep\_coverage" (keep coverage data) to 1. Also, please change the Perl script somatic.pl so that `$skip_recal=1` (skip base recalibration), and `$lofreq=1` (use lofreq for scATAC-seq) or =0 (use strelka for scRNA-Seq). Alternatively, the users can formulate their own variant calling results into the format of our pipeline’s results. Please refer to the example datasets incorporated in this R package for our format.
 
 <!-- - For available covariance structures, see the help page; -->
 <!-- ```{r, eval = FALSE} -->
