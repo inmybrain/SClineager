@@ -358,7 +358,7 @@ We also provide this CTCL dataset from the Mimitou et al. publication [\[1\]](#1
 Runtime and memory usage
 ------------------------
 
-We perform a series of simulations with different number of cells and variants in these ranges (50, 100, 150, 200, 250 cells and 80, 200, 400, 800, 1200 variants), and measure the runtime and memory used for runnning the internal function `sclineager_internal`. The length of MCMC chains is 10000. Time is measured in mins. Each combination of the simulation is repeated 100 times to compute an average and a standard deviation.
+We perform a series of simulations with different number of cells and variants in these ranges (50, 100, 150, 200 cells and 80, 200, 400, 800, 1200 variants), and measure the runtime and memory used for runnning the internal function `sclineager_internal`. The length of MCMC chains is 10000. Time is measured in mins. Each combination of the simulation is repeated 100 times to compute an average and a standard deviation.
 
 <table>
 <colgroup>
