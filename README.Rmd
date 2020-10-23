@@ -376,6 +376,33 @@ grid_arrange_shared_legend(gg_fig + ggtitle("Estimated"),
 
 We also provide this CTCL dataset from the Mimitou et al. publication [[1]](#1), which we processed and used in our manuscript.
 
+## Runtime and memory usage
+
+We perform a series of simulations with different number of cells and variants in these ranges (50, 100, 150, 200, 250 cells and 80, 200, 400, 800, 1200 variants), and measure the runtime and memory used for runnning the internal function `sclineager_internal`. The  length of MCMC chains is 10000. Time is measured in mins. Each combination of the simulation is repeated 100 times to compute an average and a standard deviation. 
+
+|      |J=80             |J=200            |J=400            |J=800             |J=1200             |
+|:-----|:----------------|:----------------|:----------------|:-----------------|:------------------|
+|I=50  |30.84 (3.159)    |74.23 (2.830)    |77.21 (3.972)    |69.46 (1.642)     |89.97 (1.506)      |
+|I=100 |56.95 (0.981)    |140.88 (5.643)   |187.59 (2.263)   |252.49 (2.179)    |382.87 (4.168)     |
+|I=150 |98.77 (1.485)    |287.23 (6.868)   |457.03 (5.784)   |726.07 (8.905)    |1125.95 (7.423)    |
+|I=200 |184.39 (1.806)   |533.56 (7.774)   |942.97 (12.081)  |1622.80 (16.421)  |2488.86 (32.075)   |
+
+<!-- Table: Runtime information for _SClineager_. -->
+
+
+Since the memory usage is constant across different repetitions, we show it without a standard deviation.
+Memory usage is measured in MB.
+
+|      |J=80 |J=200 |J=400 |J=800 |J=1200 |
+|:-----|:----|:-----|:-----|:-----|:------|
+|I=50  |0.13 |0.23  |0.39  |0.71  |1.03   |
+|I=100 |0.25 |0.45  |0.77  |1.41  |2.05   |
+|I=150 |0.42 |0.71  |1.19  |2.15  |3.12   |
+|I=200 |0.62 |1.01  |1.65  |2.93  |4.21   |
+
+<!-- Table: Memory usage for _SClineager_. -->
+
+
 
 ## References
 <a id="1">[1]</a> 
