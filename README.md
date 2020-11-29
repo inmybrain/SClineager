@@ -4,20 +4,17 @@
 
 Please visit our website for more bioinformatics tools: <https://qbrc.swmed.edu/labs/wanglab>
 
-SClineager
-==========
+# SClineager
 
 This is a README file of the R package *SClineager*. In our paper [available in bioRxiv](https://www.biorxiv.org/content/10.1101/2020.01.01.892562v1), we develop a Bayesian hierarchical model that performs lineage tracing of single cells based on genetic markers. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. Detailed usage instructions can be found in the function manual. Here we provide a basic workflow.
 
-Configuration
--------------
+## Configuration
 
 -   For this exposition, *Rcpp* ver 1.0.2, *MCMCpack* ver 1.4.5, *vioplot* ver 0.3.4, *gplots* ver 3.0.3 are used.
 
 -   *SClineager* ver 1.10 is performed in R ver 3.6.2 interfaced with a MacBook Pro with a 3.0 GHz Dual Core Intel Core i7 and 16 GB RAM.
 
-Installation of the package
----------------------------
+## Installation of the package
 
 To install our package, you may simply execute the following codes. The installation will take about a minute.
 
@@ -40,8 +37,7 @@ If you come across a problem like [this](https://github.com/r-lib/remotes/issues
 
 <!-- ## Download the example dataset -->
 <!-- The dataset used in the following illustration of _SClineager_ can be downloaded in [here](?). -->
-A basic example of using the package
-------------------------------------
+## A basic example of using the package
 
 The names of folders in this example can be anything. Just change the codes to read from the correct directories. The names and formats of the .txt files have to be the same. First, your working directory should be at *test* that contains two sub-folders *mutations* and *processed*. Please see the following directory structure used in our example. The *mutations* folder contains the mutation data of different cells (such as P301\_9\_5) of different samples (such as 301). The *processed* folder will need to contain empty sub-folders corresponding to the sample names.
 
@@ -279,8 +275,7 @@ As a result, `results.RData` and `imputation_results.pdf` are generated under ea
 <!--        mapping = aes(x = pred, y = true)) +  -->
 <!--   geom_point() + geom_abline(intercept = 0, slope = 1, color = "red") -->
 <!-- ``` -->
-Another toy example with simulated data
----------------------------------------
+## Another toy example with simulated data
 
 You can reach one of toy datasets used in our simulation study through [this link](https://github.com/inmybrain/SClineager/tree/master/data), which points to the folder `data` of this repository. We provide this small toy dataset because the runtime will be very short.
 
@@ -350,89 +345,34 @@ grid_arrange_shared_legend(gg_fig + ggtitle("Estimated"),
 
 ![heatmap\_VAF](./fig/toy_VAF.png)
 
-CTCL dataset
-------------
+## CTCL dataset
 
 We also provide this CTCL dataset from the Mimitou et al. publication [\[1\]](#1), which we processed and used in our manuscript.
 
-Runtime and memory usage
-------------------------
-
-We perform a series of simulations with different number of cells and variants in these ranges (50, 100, 150, 200 cells and 80, 200, 400, 800, 1200 variants), and measure the runtime and memory used for runnning the internal function `sclineager_internal`. The length of MCMC chains is 10000. Time is measured in mins. Each combination of the simulation is repeated 100 times to compute an average and a standard deviation.
-
-<table>
-<colgroup>
-<col width="7%" />
-<col width="18%" />
-<col width="18%" />
-<col width="18%" />
-<col width="19%" />
-<col width="20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">J=80</th>
-<th align="left">J=200</th>
-<th align="left">J=400</th>
-<th align="left">J=800</th>
-<th align="left">J=1200</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">I=50</td>
-<td align="left">30.84 (3.159)</td>
-<td align="left">74.23 (2.830)</td>
-<td align="left">77.21 (3.972)</td>
-<td align="left">69.46 (1.642)</td>
-<td align="left">89.97 (1.506)</td>
-</tr>
-<tr class="even">
-<td align="left">I=100</td>
-<td align="left">56.95 (0.981)</td>
-<td align="left">140.88 (5.643)</td>
-<td align="left">187.59 (2.263)</td>
-<td align="left">252.49 (2.179)</td>
-<td align="left">382.87 (4.168)</td>
-</tr>
-<tr class="odd">
-<td align="left">I=150</td>
-<td align="left">98.77 (1.485)</td>
-<td align="left">287.23 (6.868)</td>
-<td align="left">457.03 (5.784)</td>
-<td align="left">726.07 (8.905)</td>
-<td align="left">1125.95 (7.423)</td>
-</tr>
-<tr class="even">
-<td align="left">I=200</td>
-<td align="left">184.39 (1.806)</td>
-<td align="left">533.56 (7.774)</td>
-<td align="left">942.97 (12.081)</td>
-<td align="left">1622.80 (16.421)</td>
-<td align="left">2488.86 (32.075)</td>
-</tr>
-</tbody>
-</table>
-
+<!-- ## Runtime and memory usage -->
+<!-- We perform a series of simulations with different number of cells and variants in these ranges (50, 100, 150, 200 cells and 80, 200, 400, 800, 1200 variants), and measure the runtime and memory used for runnning the internal function `sclineager_internal`. The  length of MCMC chains is 10000. Time is measured in mins. Each combination of the simulation is repeated 100 times to compute an average and a standard deviation.  -->
+<!-- |  Time   |J=80             |J=200            |J=400            |J=800             |J=1200             | -->
+<!-- |:-----|:----------------|:----------------|:----------------|:-----------------|:------------------| -->
+<!-- |I=50  |30.84 (3.159)    |74.23 (2.830)    |77.21 (3.972)    |69.46 (1.642)     |89.97 (1.506)      | -->
+<!-- |I=100 |56.95 (0.981)    |140.88 (5.643)   |187.59 (2.263)   |252.49 (2.179)    |382.87 (4.168)     | -->
+<!-- |I=150 |98.77 (1.485)    |287.23 (6.868)   |457.03 (5.784)   |726.07 (8.905)    |1125.95 (7.423)    | -->
+<!-- |I=200 |184.39 (1.806)   |533.56 (7.774)   |942.97 (12.081)  |1622.80 (16.421)  |2488.86 (32.075)   | -->
 <!-- Table: Runtime information for _SClineager_. -->
-Since the memory usage is constant across different repetitions, we show it without a standard deviation. Memory usage is measured in MB.
-
-|       | J=80 | J=200 | J=400 | J=800 | J=1200 |
-|:------|:-----|:------|:------|:------|:-------|
-| I=50  | 0.13 | 0.23  | 0.39  | 0.71  | 1.03   |
-| I=100 | 0.25 | 0.45  | 0.77  | 1.41  | 2.05   |
-| I=150 | 0.42 | 0.71  | 1.19  | 2.15  | 3.12   |
-| I=200 | 0.62 | 1.01  | 1.65  | 2.93  | 4.21   |
-
+<!-- Since the memory usage is constant across different repetitions, we show it without a standard deviation. -->
+<!-- Memory usage is measured in MB. -->
+<!-- | Memory |J=50  |J=100 |J=150 |J=200 |J=250 | -->
+<!-- |:------|:-----|:-----|:-----|:-----|:-----| -->
+<!-- |I=80   |0.16  |0.22  |0.29  |0.35  |0.42  | -->
+<!-- |I=200  |0.53  |0.69  |0.85  |1.01  |1.17  | -->
+<!-- |I=400  |1.65  |1.97  |2.29  |2.61  |2.93  | -->
+<!-- |I=800  |5.81  |6.45  |7.09  |7.73  |8.37  | -->
+<!-- |I=1200 |12.53 |13.49 |14.45 |15.41 |16.37 | -->
 <!-- Table: Memory usage for _SClineager_. -->
-References
-----------
+## References
 
 <a id="1">\[1\]</a> Mimitou, E. P. et al. (2019) Multiplexed detection of proteins, transcriptomes, clonotypes and CRISPR perturbations in single cells. Nat. Methods 16, 409–412.
 
-Notes
------
+## Notes
 
 -   The variant calling of the single cell sequencing data should be performed by our variant calling pipeline: <https://github.com/tianshilu/QBRC-Somatic-Pipeline> (**temporarily closed as of 20.09.24**). One should use the "tumor-only" mode for calling mutations, and set "keep\_coverage" (keep coverage data) to 1.
 
@@ -445,8 +385,7 @@ Notes
 <!-- ?Mclust_SEP_cpp -->
 <!-- ``` -->
 <!-- - As for initial assignment of cluster membership, each sample is assigned randomly to clusters. -->
-Issues
-------
+## Issues
 
 We are happy to troubleshoot any issue with the package;
 
@@ -456,7 +395,6 @@ We are happy to troubleshoot any issue with the package;
 
 <!-- ## Error and warning messages you may get -->
 <!-- ## References  -->
-License
--------
+## License
 
 GPL 3.0
