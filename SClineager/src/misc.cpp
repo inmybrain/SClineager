@@ -1,4 +1,4 @@
-//------- Source from SClineager_Gibbs_ver2.cpp: do not edit by hand
+//------- Source from SClineager_Gibbs_ver3.cpp: do not edit by hand
 // [[Rcpp::depends(RcppArmadillo)]]
 #include <RcppArmadillo.h>
 using namespace Rcpp;

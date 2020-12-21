@@ -6,7 +6,7 @@
 #' @description An internal function for Gibbs sampling wrapped by \link{sclineager_internal}
 #' @seealso \link{sclineager_internal}
 #' @exports
-sclineager_gibbs <- function(psi, k_mat, transform_mat, mu, dfreedom, sigma, max_iter = 100L, save = FALSE) {
-    .Call('_SClineager_sclineager_gibbs', PACKAGE = 'SClineager', psi, k_mat, transform_mat, mu, dfreedom, sigma, max_iter, save)
+sclineager_gibbs <- function(psi, k_mat, transform_mat, mu, dfreedom, sigma, max_iter = 100L, save = FALSE, loglike_save = FALSE) {
+    .Call('_SClineager_sclineager_gibbs', PACKAGE = 'SClineager', psi, k_mat, transform_mat, mu, dfreedom, sigma, max_iter, save, loglike_save)
 }
 

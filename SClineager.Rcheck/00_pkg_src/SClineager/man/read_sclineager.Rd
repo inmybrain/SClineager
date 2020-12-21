@@ -4,9 +4,16 @@
 \alias{read_sclineager}
 \title{Read datsets for SClineager}
 \usage{
-read_sclineager(runinfo, coverage_cutoff, coverage_percentage,
-  cell_percentage, folder, artefact_percentage, species = "hg38",
-  keep_other = FALSE)
+read_sclineager(
+  runinfo,
+  coverage_cutoff,
+  coverage_percentage,
+  cell_percentage,
+  folder,
+  artefact_percentage,
+  species = "hg38",
+  keep_other = FALSE
+)
 }
 \arguments{
 \item{runinfo}{A data frame with ``Path'' and ``Cell''. ``Path'' is the path to the raw mutation output folder for each cell. ``Cell'' is the name of each single cell.}

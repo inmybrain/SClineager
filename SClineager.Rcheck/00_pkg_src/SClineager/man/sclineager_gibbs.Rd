@@ -4,8 +4,17 @@
 \alias{sclineager_gibbs}
 \title{An internal function for Gibbs sampling}
 \usage{
-sclineager_gibbs(psi, k_mat, transform_mat, mu, dfreedom, sigma,
-  max_iter = 100L, save = FALSE)
+sclineager_gibbs(
+  psi,
+  k_mat,
+  transform_mat,
+  mu,
+  dfreedom,
+  sigma,
+  max_iter = 100L,
+  save = FALSE,
+  loglike_save = FALSE
+)
 }
 \description{
 An internal function for Gibbs sampling wrapped by \link{sclineager_internal}

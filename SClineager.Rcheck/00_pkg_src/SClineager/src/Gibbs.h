@@ -1,4 +1,4 @@
-//------- Source from SClineager_Gibbs_ver2.cpp: do not edit by hand
+//------- Source from SClineager_Gibbs_ver3.cpp: do not edit by hand
 #ifndef Gibbs
 #define Gibbs
 
@@ -20,7 +20,8 @@ Rcpp::List sclineager_gibbs(
     int dfreedom,
     arma::mat sigma,
     int max_iter = 100,
-    bool save = false
+    bool save = false,
+    bool loglike_save = false  
 )
 ;
 #endif

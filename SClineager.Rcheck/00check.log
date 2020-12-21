@@ -1,10 +1,10 @@
 * using log directory ‘/Users/PSO/Dropbox/Research/19_03.SingleCellLineageTracing/rcode/R_package/SClineager.Rcheck’
-* using R version 3.5.2 (2018-12-20)
-* using platform: x86_64-apple-darwin15.6.0 (64-bit)
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-apple-darwin17.0 (64-bit)
 * using session charset: UTF-8
 * checking for file ‘SClineager/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘SClineager’ version ‘1.10’
+* this is package ‘SClineager’ version ‘1.30’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... OK
@@ -29,6 +29,7 @@
 * checking whether the package can be unloaded cleanly ... OK
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
 * checking dependencies in R code ... NOTE
 Namespace in Imports field not imported from: ‘Rcpp’
   All declared Imports should be used.
@@ -42,7 +43,8 @@ read_sclineager: warning in read.table(file, header = F,
 explore_sclineager: no visible binding for global variable ‘results’
 Undefined global functions or variables:
   results
-* checking Rd files ... OK
+* checking Rd files ... NOTE
+prepare_Rd: run_sclineager.Rd:63-65: Dropping empty section \details
 * checking Rd metadata ... OK
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... WARNING
@@ -55,7 +57,7 @@ Extensions’ manual.
 * checking Rd \usage sections ... WARNING
 Undocumented arguments in documentation object 'sclineager_gibbs'
   ‘psi’ ‘k_mat’ ‘transform_mat’ ‘mu’ ‘dfreedom’ ‘sigma’ ‘max_iter’
-  ‘save’
+  ‘save’ ‘loglike_save’
 
 Functions with \usage entries need to have the appropriate \alias
 entries, and all their arguments documented.
@@ -69,6 +71,7 @@ Extensions’ manual.
 * checking compilation flags in Makevars ... OK
 * checking for GNU extensions in Makefiles ... OK
 * checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
+* checking use of PKG_*FLAGS in Makefiles ... OK
 * checking compiled code ... NOTE
 File ‘SClineager/libs/SClineager.so’:
   Found ‘_printf’, possibly from ‘printf’ (C)
@@ -82,4 +85,4 @@ See ‘Writing portable packages’ in the ‘Writing R Extensions’ manual.
 * checking examples ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 WARNINGs, 3 NOTEs
+Status: 2 WARNINGs, 4 NOTEs

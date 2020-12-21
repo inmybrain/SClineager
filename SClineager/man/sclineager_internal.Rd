@@ -4,8 +4,16 @@
 \alias{sclineager_internal}
 \title{The Gibbs sampler for SClineager}
 \usage{
-sclineager_internal(mutations_mat, coverage_mat, max_iter, vaf_offset,
-  dfreedom, psi, control = NULL, save = FALSE)
+sclineager_internal(
+  mutations_mat,
+  coverage_mat,
+  max_iter,
+  vaf_offset,
+  dfreedom,
+  psi,
+  control = NULL,
+  save = FALSE
+)
 }
 \arguments{
 \item{mutations_mat}{(Data) The variant allele frequency (VAF) matrix, whose rows are mutations and columns are samples. Each value is in [0,1] and NA value is for unobservable cells.}

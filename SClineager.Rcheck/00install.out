@@ -1,14 +1,20 @@
 * installing *source* package ‘SClineager’ ...
+** using staged installation
 ** libs
-clang++ -std=gnu++11 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG  -I"/Library/Frameworks/R.framework/Versions/3.5/Resources/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Versions/3.5/Resources/library/RcppArmadillo/include" -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include  -fopenmp  -fPIC  -Wall -g -O2 -c Gibbs.cpp -o Gibbs.o
-clang++ -std=gnu++11 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG  -I"/Library/Frameworks/R.framework/Versions/3.5/Resources/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Versions/3.5/Resources/library/RcppArmadillo/include" -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include  -fopenmp  -fPIC  -Wall -g -O2 -c RcppExports.cpp -o RcppExports.o
-clang++ -std=gnu++11 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG  -I"/Library/Frameworks/R.framework/Versions/3.5/Resources/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Versions/3.5/Resources/library/RcppArmadillo/include" -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include  -fopenmp  -fPIC  -Wall -g -O2 -c misc.cpp -o misc.o
-clang++ -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o SClineager.so Gibbs.o RcppExports.o misc.o -fopenmp -L/Library/Frameworks/R.framework/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Resources/lib -lRblas -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin15/6.1.0 -L/usr/local/gfortran/lib -lgfortran -lquadmath -lm -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
-installing to /Users/PSO/Dropbox/Research/19_03.SingleCellLineageTracing/rcode/R_package/SClineager.Rcheck/SClineager/libs
+clang++ -mmacosx-version-min=10.13 -std=gnu++11 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG  -I'/Library/Frameworks/R.framework/Versions/4.0/Resources/library/Rcpp/include' -I'/Library/Frameworks/R.framework/Versions/4.0/Resources/library/RcppArmadillo/include' -I/usr/local/include    -fPIC  -Wall -g -O2  -c Gibbs.cpp -o Gibbs.o
+clang++ -mmacosx-version-min=10.13 -std=gnu++11 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG  -I'/Library/Frameworks/R.framework/Versions/4.0/Resources/library/Rcpp/include' -I'/Library/Frameworks/R.framework/Versions/4.0/Resources/library/RcppArmadillo/include' -I/usr/local/include    -fPIC  -Wall -g -O2  -c RcppExports.cpp -o RcppExports.o
+clang++ -mmacosx-version-min=10.13 -std=gnu++11 -I"/Library/Frameworks/R.framework/Resources/include" -DNDEBUG  -I'/Library/Frameworks/R.framework/Versions/4.0/Resources/library/Rcpp/include' -I'/Library/Frameworks/R.framework/Versions/4.0/Resources/library/RcppArmadillo/include' -I/usr/local/include    -fPIC  -Wall -g -O2  -c misc.cpp -o misc.o
+clang++ -mmacosx-version-min=10.13 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o SClineager.so Gibbs.o RcppExports.o misc.o -L/Library/Frameworks/R.framework/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Resources/lib -lRblas -L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin18/8.2.0 -L/usr/local/gfortran/lib -lgfortran -lquadmath -lm -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
+ld: warning: directory not found for option '-L/usr/local/gfortran/lib/gcc/x86_64-apple-darwin18/8.2.0'
+ld: warning: directory not found for option '-L/usr/local/gfortran/lib'
+installing to /Users/PSO/Dropbox/Research/19_03.SingleCellLineageTracing/rcode/R_package/SClineager.Rcheck/00LOCK-SClineager/00new/SClineager/libs
 ** R
 ** byte-compile and prepare package for lazy loading
 ** help
 *** installing help indices
 ** building package indices
-** testing if installed package can be loaded
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
 * DONE (SClineager)

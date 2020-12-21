@@ -27,7 +27,7 @@ This is a README file of the R package _SClineager_. In our paper [available in 
 
 - For this exposition, _Rcpp_ ver 1.0.2, _MCMCpack_ ver 1.4.5, _vioplot_ ver 0.3.4, _gplots_ ver 3.0.3 are used.
 
-- _SClineager_ ver 1.10 is performed in R ver 3.6.2 interfaced with a MacBook Pro with a 3.0 GHz Dual Core Intel Core i7 and 16 GB RAM.
+- _SClineager_ ver 1.30 is performed in R ver 4.0.3 interfaced with a MacBook Pro with a 2.3 GHz Quad Core Intel Core i7 and 32 GB RAM.
 
 
 ## Installation of the package

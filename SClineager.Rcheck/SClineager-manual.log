@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  21 APR 2020 22:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.9.8)  21 DEC 2020 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**\input ./Rd2.tex
+**\nonstopmode \input ./Rd2.tex \input ./Rd2.tex \input ./Rd2.tex \input ./Rd2.
+tex
 (./Rd2.tex
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
@@ -309,15 +310,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `hyperindex' has already been used,
-(hyperref)                setting the option has no effect on input line 366.
+(hyperref)                setting the option has no effect on input line 377.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 366.
+Package hyperref Info: Option `colorlinks' set `true' on input line 377.
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 366.
+(hyperref)                setting the option has no effect on input line 377.
 
-Package hyperref Info: Option `linktocpage' set `true' on input line 366.
-Package hyperref Info: Option `plainpages' set `false' on input line 366.
+Package hyperref Info: Option `linktocpage' set `true' on input line 377.
+Package hyperref Info: Option `plainpages' set `false' on input line 377.
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
@@ -721,7 +722,9 @@ Now handling font encoding PD1 ...
 
 
 Writing index file Rd2.idx
-(./Rd2.aux)
+
+(/private/var/folders/j3/5nhzd6x55mz7669q5mfs924m0000gn/T/RtmpwORhmu/Rd2pdf8355
+765c5eb/Rd2.aux)
 \openout1 = `Rd2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -777,7 +780,10 @@ LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
 
-(./Rd2.out) (./Rd2.out)
+(/private/var/folders/j3/5nhzd6x55mz7669q5mfs924m0000gn/T/RtmpwORhmu/Rd2pdf8355
+765c5eb/Rd2.out)
+(/private/var/folders/j3/5nhzd6x55mz7669q5mfs924m0000gn/T/RtmpwORhmu/Rd2pdf8355
+765c5eb/Rd2.out)
 \@outlinefile=\write4
 \openout4 = `Rd2.out'.
 
@@ -787,8 +793,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
 LaTeX Font Info:    Try loading font information for T1+zi4 on input line 23.
@@ -804,7 +809,9 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 32.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-) (./Rd2.toc
+)
+(/private/var/folders/j3/5nhzd6x55mz7669q5mfs924m0000gn/T/RtmpwORhmu/Rd2pdf8355
+765c5eb/Rd2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -813,58 +820,61 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `Rd2.toc'.
 
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-) [1
+)
+[1
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 ) [2]
-Overfull \hbox (6.27722pt too wide) in paragraph at lines 97--98
+Overfull \hbox (6.27722pt too wide) in paragraph at lines 104--105
 []\T1/ptm/m/n/10 The vari-ant al-lele fre-quency (VAF) ma-trix, whose rows are 
 mu-ta-tions and columns
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 105.
+(Font)              scaled to size 9.0pt on input line 112.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-)
-Overfull \hbox (12.96805pt too wide) in paragraph at lines 131--132
+) [3]
+Overfull \hbox (12.96805pt too wide) in paragraph at lines 149--150
 \T1/ptm/m/n/10 ``non-frameshift sub-sti-tu-tion'', ``non-syn-ony-mous SNV'', ``
 syn-ony-mous SNV'', ``splic-
  []
 
-[3] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
+[4] (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-) [4]
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
-) [5] (./Rd2.ind
-[6] [7
+) [5] [6]
+(/private/var/folders/j3/5nhzd6x55mz7669q5mfs924m0000gn/T/RtmpwORhmu/Rd2pdf8355
+765c5eb/Rd2.ind [7] [8
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
- (./Rd2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+
+(/private/var/folders/j3/5nhzd6x55mz7669q5mfs924m0000gn/T/RtmpwORhmu/Rd2pdf8355
+765c5eb/Rd2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `Rd2.out' has not changed.
 (rerunfilecheck)             Checksum: 44CD22653A21CD73ACFE99769B31F017;397.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
  ) 
 Here is how much of TeX's memory you used:
- 6708 strings out of 492995
- 95798 string characters out of 6132705
- 179646 words of memory out of 5000000
- 10106 multiletter control sequences out of 15000+600000
+ 6711 strings out of 492995
+ 96927 string characters out of 6132705
+ 179673 words of memory out of 5000000
+ 10107 multiletter control sequences out of 15000+600000
  37871 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,36p,723b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,5n,36p,787b,558s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2017/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/l
@@ -873,10 +883,10 @@ xlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (7 pages, 87721 bytes).
+Output written on Rd2.pdf (8 pages, 88968 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-//------- Source from SClineager_Gibbs_ver2.cpp: do not edit by hand
+//------- Source from SClineager_Gibbs_ver3.cpp: do not edit by hand
 // [[Rcpp::depends(RcppArmadillo)]]
 #include <RcppArmadillo.h>
 using namespace Rcpp;
@@ -49,20 +49,23 @@ Rcpp::List sclineager_gibbs(
     int dfreedom,
     arma::mat sigma,
     int max_iter = 100,
-    bool save = false
+    bool save = false,
+    bool loglike_save = false  
 ){
   double tick = 0.2;
   
   mat genotype_mat = transform_mat;
   mat genotype_mat_avg = zeros(genotype_mat.n_rows, genotype_mat.n_cols), sigma_avg = zeros(sigma.n_rows, sigma.n_cols);
   cube genotype_mat_all(transform_mat.n_rows, transform_mat.n_cols, max_iter);
-  cube sigma_all(sigma.n_rows, sigma.n_cols, max_iter);
+  cube sigma_all;
   uvec is_low_cover = find_nonfinite(transform_mat);
   uvec is_high_cover = find_finite(transform_mat);
   int g_nr = genotype_mat.n_rows;
   int k_nc = k_mat.n_cols;
   vec loglike(max_iter);
-  
+  if(save){
+    sigma_all = zeros(sigma.n_rows, sigma.n_cols, max_iter);
+  }
   for(int iter = 0; iter < max_iter; iter++) {
     if(any(iter == regspace(1, int(max_iter * tick), max_iter))){
       printf("%3.f%%...", 100 * double(iter) / double(max_iter));
@@ -75,11 +78,12 @@ Rcpp::List sclineager_gibbs(
       tmp.elem(is_low_cover).fill(0);
       mat inverse_Kj = zeros(k_nc, k_nc);
       for(int k = 0; k < k_nc; k++) {
-        if(conv_to<double>::from(k_mat.row(j).col(k)) > 0.0){
-          inverse_Kj(k, k) = 1.0 / conv_to<double>::from(k_mat.row(j).col(k));
+        if(as_scalar(k_mat(j,k)) > 0.0){
+        // if(as_scalar(k_mat.row(j).col(k)) > 0.0){
+          inverse_Kj(k, k) = 1.0 / as_scalar(k_mat(j,k));
         }
       }
-      mat C = inv(inverse_Kj + inverse_sigma);
+      mat C = inv_sympd(inverse_Kj + inverse_sigma);
       genotype_mat.row(j) = (C * (sum(inverse_sigma, 1) * mu(j) + inverse_Kj * tmp.row(j).t()) +
         chol(C) * randn(k_nc, 1)).t();
       
@@ -87,8 +91,9 @@ Rcpp::List sclineager_gibbs(
                         genotype_mat.row(j) - mu(j));
     }
     // Update covariance matrix
-    sigma = iwishrnd(scale_mat, dfreedom + genotype_mat.n_rows);
-    
+    if(any(iter == regspace(1, int(max_iter * tick), max_iter))){
+      sigma = iwishrnd(scale_mat, dfreedom + genotype_mat.n_rows);
+    }
     if(save){
       genotype_mat_all.slice(iter) = genotype_mat;
       sigma_all.slice(iter) = sigma;
@@ -99,9 +104,11 @@ Rcpp::List sclineager_gibbs(
     }
     
     // Posterior likelihood
-    loglike(iter) = getPostLike(k_mat, transform_mat, genotype_mat, 
-                                is_high_cover, mu, sigma, psi, 
-                                dfreedom, true);
+    if(loglike_save){
+      loglike(iter) = getPostLike(k_mat, transform_mat, genotype_mat, 
+              is_high_cover, mu, sigma, psi, 
+              dfreedom, true);
+    }
   } // iter
   genotype_mat_avg /= double (max_iter - round(max_iter / 2.0));
   sigma_avg /= double (max_iter - round(max_iter / 2.0));

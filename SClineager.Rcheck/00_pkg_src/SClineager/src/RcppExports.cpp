@@ -7,8 +7,8 @@
 using namespace Rcpp;
 
 // sclineager_gibbs
-Rcpp::List sclineager_gibbs(arma::mat psi, arma::mat k_mat, arma::mat transform_mat, arma::vec mu, int dfreedom, arma::mat sigma, int max_iter, bool save);
-RcppExport SEXP _SClineager_sclineager_gibbs(SEXP psiSEXP, SEXP k_matSEXP, SEXP transform_matSEXP, SEXP muSEXP, SEXP dfreedomSEXP, SEXP sigmaSEXP, SEXP max_iterSEXP, SEXP saveSEXP) {
+Rcpp::List sclineager_gibbs(arma::mat psi, arma::mat k_mat, arma::mat transform_mat, arma::vec mu, int dfreedom, arma::mat sigma, int max_iter, bool save, bool loglike_save);
+RcppExport SEXP _SClineager_sclineager_gibbs(SEXP psiSEXP, SEXP k_matSEXP, SEXP transform_matSEXP, SEXP muSEXP, SEXP dfreedomSEXP, SEXP sigmaSEXP, SEXP max_iterSEXP, SEXP saveSEXP, SEXP loglike_saveSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,13 +20,14 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::mat >::type sigma(sigmaSEXP);
     Rcpp::traits::input_parameter< int >::type max_iter(max_iterSEXP);
     Rcpp::traits::input_parameter< bool >::type save(saveSEXP);
-    rcpp_result_gen = Rcpp::wrap(sclineager_gibbs(psi, k_mat, transform_mat, mu, dfreedom, sigma, max_iter, save));
+    Rcpp::traits::input_parameter< bool >::type loglike_save(loglike_saveSEXP);
+    rcpp_result_gen = Rcpp::wrap(sclineager_gibbs(psi, k_mat, transform_mat, mu, dfreedom, sigma, max_iter, save, loglike_save));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_SClineager_sclineager_gibbs", (DL_FUNC) &_SClineager_sclineager_gibbs, 8},
+    {"_SClineager_sclineager_gibbs", (DL_FUNC) &_SClineager_sclineager_gibbs, 9},
     {NULL, NULL, 0}
 };
 
