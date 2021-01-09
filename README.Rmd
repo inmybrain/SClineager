@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 # SClineager
 
-This is a README file of the R package _SClineager_. In our paper [available in bioRxiv](https://www.biorxiv.org/content/10.1101/2020.01.01.892562v1), we develop a Bayesian hierarchical  model that performs lineage tracing of single cells based on genetic markers. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. Detailed usage instructions can be found in the function manual. Here we provide a basic workflow.
+This is a README file of the R package _SClineager_. In our paper [available in Cell Reports](https://doi.org/10.1016/j.celrep.2020.108589), we develop a Bayesian hierarchical  model that performs lineage tracing of single cells based on genetic markers. Single cell variant calling has two inherent issues: (1) low coverage on many positions in many cells and (2) allelic bias due to true monoallelic expression in single cells or due to sampling bias. This algorithm infers genetic trajectories of cells by taking these two issues into account. More details about the structure of the data can be found in the example dataset that goes along with this R package. The details of the Bayesian model can be found in our upcoming paper. Detailed usage instructions can be found in the function manual. Here we provide a basic workflow.
 
 
 ## Configuration
@@ -425,6 +425,25 @@ Alternatively, the users can formulate their own variant calling results into th
 <!-- ``` -->
 
 <!-- - As for initial assignment of cluster membership, each sample is assigned randomly to clusters. -->
+
+## Citation
+To cite this package, please use this bibtex format:
+```{latex}
+@article{Lu:2021,
+	title = "Overcoming Expressional Drop-outs in Lineage Reconstruction from Single-Cell RNA-Sequencing Data",
+	journal = "Cell Reports",
+	volume = "34",
+	number = "1",
+	pages = "108589",
+	year = "2021",
+	issn = "2211-1247",
+	doi = "https://doi.org/10.1016/j.celrep.2020.108589",
+	url = "http://www.sciencedirect.com/science/article/pii/S2211124720315783",
+	author = "Tianshi Lu and Seongoh Park and James Zhu and Yunguan Wang and Xiaowei Zhan and Xinlei Wang and Li Wang and Hao Zhu and Tao Wang",
+	keywords = "scRNA-seq, lineage tracing, drop-out, genetics"
+}
+```
+
 
 ## Issues
 
