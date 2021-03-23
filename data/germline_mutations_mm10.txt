@@ -1,0 +1,69 @@
+Chr	Start	End	Ref	Alt	Caller	Normal_ref	Normal_alt	Tumor_ref	Tumor_alt	Func.refGene	Gene.refGene	ExonicFunc.refGene	AAChange.refGene
+chr10	111486741	111486741	T	C	strelka_germline	2	4	2	4	exonic	Nap1l1	synonymous SNV	Nap1l1:NM_015781:exon4:c.T201C:p.I67I
+chr11	6478113	6478113	G	GAA	strelka_germline	4	6	4	6	intergenic	Purb;Myo1g	.	.
+chr11	20685238	20685238	G	GT	strelka_germline	4	6	4	6	UTR3	Aftph	.	.
+chr11	24041505	24041505	A	C	strelka_germline	0	6	0	6	intergenic	Papolg;Bcl11a	.	.
+chr11	24041506	24041506	A	G	strelka_germline	0	6	0	6	intergenic	Papolg;Bcl11a	.	.
+chr11	52122587	52122587	T	G	strelka_germline	10	4	10	4	UTR3	Ppp2ca	.	.
+chr11	52389130	52389130	T	C	strelka_germline	4	4	4	4	UTR3	Vdac1	.	.
+chr11	55454900	55454900	T	C	strelka_germline	10	4	10	4	exonic	Atox1	synonymous SNV	Atox1:NM_009720:exon2:c.A63G:p.R21R
+chr11	63444278	63444278	A	C	strelka_germline	0	16	0	16	intergenic	Pmp22;Hs3st3b1	.	.
+chr11	69396182	69396182	T	G	strelka_germline	4	6	4	6	exonic	Naa38	synonymous SNV	Naa38:NM_030083:exon2:c.T87G:p.S29S
+chr11	109011936	109011936	T	C	strelka_germline	0	6	0	6	intergenic	Axin2;E030025P04Rik	.	.
+chr11	109011942	109011942	T	C	strelka_germline	0	6	0	6	intergenic	Axin2;E030025P04Rik	.	.
+chr11	109011999	109011999	A	G	strelka_germline	0	6	0	6	intergenic	Axin2;E030025P04Rik	.	.
+chr11	109012019	109012019	A	G	strelka_germline	0	6	0	6	intergenic	Axin2;E030025P04Rik	.	.
+chr11	114668590	114668590	T	C	strelka_germline	6	6	6	6	UTR5	Rpl38	.	.
+chr12	72938859	72938859	A	T	strelka_germline	0	6	0	6	intergenic	4930447C04Rik;Six6	.	.
+chr12	72938864	72938864	T	C	strelka_germline	0	8	0	8	intergenic	4930447C04Rik;Six6	.	.
+chr12	104475105	104475105	T	G	strelka_germline	0	6	0	6	intergenic	Gsc;Dicer1	.	.
+chr12	104475106	104475106	C	A	strelka_germline	0	6	0	6	intergenic	Gsc;Dicer1	.	.
+chr13	56074258	56074258	A	G	strelka_germline	0	12	0	12	exonic	H2afy	nonsynonymous SNV	H2afy:NM_001159515:exon9:c.T1076C:p.V359A,H2afy:NM_001159513:exon9:c.T1085C:p.V362A,H2afy:NM_001159514:exon9:c.T1079C:p.V360A,H2afy:NM_012015:exon9:c.T1088C:p.V363A
+chr13	74322474	74322474	A	C	strelka_germline	4	4	4	4	UTR3	Sdha	.	.
+chr14	74744698	74744698	C	CA	strelka_germline	4	4	4	4	exonic	Esd	frameshift substitution	Esd:NM_016903:exon7:c.552delinsCA:p.A187Sfs*3,Esd:NM_001285423:exon7:c.591delinsCA:p.A200Sfs*3
+chr15	8144078	8144078	C	G	strelka_germline	2	18	2	18	exonic	Nup155	nonsynonymous SNV	Nup155:NM_133227:exon24:c.C2656G:p.Q886E
+chr15	75086356	75086356	G	A	strelka_germline	4	4	4	4	intergenic	Ly6c1;Ly6c2	.	.
+chr17	33838239	33838240	CT	C	strelka_germline	8	6	8	6	UTR3	Ndufa7	.	.
+chr17	39846680	39846680	G	GC	strelka_germline	0	8	0	8	ncRNA_exonic	Rn45s	.	.
+chr17	39847607	39847607	T	C	strelka_germline	0	8	0	8	ncRNA_exonic	Rn45s	.	.
+chr17	39848018	39848018	C	T	strelka_germline	0	6	0	6	ncRNA_exonic	Rn45s	.	.
+chr18	43737193	43737193	G	C	strelka_germline	28	18	28	18	UTR5	Spink1	.	.
+chr18	85698095	85698095	T	C	strelka_germline	0	6	0	6	intergenic	Fbxo15;Neto1	.	.
+chr1	66831344	66831344	T	TC	strelka_germline	6	6	6	6	UTR3	Acadl	.	.
+chr1	125840223	125840223	T	G	strelka_germline	0	24	0	24	intronic	Gpr39	.	.
+chr1	131573788	131573788	C	T	strelka_germline	0	32	0	32	intergenic	Fam72a;Avpr1b	.	.
+chr1	131573805	131573805	A	G	strelka_germline	0	30	0	30	intergenic	Fam72a;Avpr1b	.	.
+chr1	149829711	149829711	A	G	strelka_germline	4	4	4	4	UTR3	Pla2g4a	.	.
+chr1	172092285	172092285	T	A	strelka_germline	0	6	0	6	exonic	Copa	nonsynonymous SNV	Copa:NM_009938:exon6:c.T427A:p.F143I
+chr1	189234500	189234500	A	C	strelka_germline	0	12	0	12	intronic	Kcnk2	.	.
+chr1	189234516	189234516	C	A	strelka_germline	0	12	0	12	intronic	Kcnk2	.	.
+chr2	17717217	17717217	A	T	strelka_germline	0	6	0	6	intronic	Nebl	.	.
+chr2	17717221	17717221	A	C	strelka_germline	0	6	0	6	intronic	Nebl	.	.
+chr2	22745102	22745102	C	G	strelka_germline	0	10	0	10	intergenic	Gad2;Apbb1ip	.	.
+chr2	22745106	22745106	G	A	strelka_germline	0	8	0	8	intergenic	Gad2;Apbb1ip	.	.
+chr2	90395187	90395187	C	G	strelka_germline	0	6	0	6	intergenic	Gm13769;Olfr1274-ps	.	.
+chr2	90395188	90395188	T	C	strelka_germline	0	6	0	6	intergenic	Gm13769;Olfr1274-ps	.	.
+chr3	96028678	96028678	C	A	strelka_germline	0	6	0	6	intronic	Vps45	.	.
+chr3	138508365	138508365	T	C	strelka_germline	0	6	0	6	intergenic	Metap1;Eif4e	.	.
+chr4	62510200	62510202	GAC	G	strelka_germline	2	4	2	4	exonic	Alad	frameshift substitution	Alad:NM_001276446:exon11:c.834_836C:p.S279Wfs*16,Alad:NM_008525:exon11:c.834_836C:p.S279Wfs*16
+chr5	17782409	17782409	C	CT	strelka_germline	0	6	0	6	UTR3	Cd36	.	.
+chr5	32842871	32842872	CA	C	strelka_germline	4	4	4	4	intronic	Prr14l	.	.
+chr5	121567800	121567800	G	A	strelka_germline	8	6	8	6	UTR3	Aldh2	.	.
+chr5	146261004	146261004	G	C	strelka_germline	0	30	0	30	intronic	Cdk8	.	.
+chr5	146261076	146261076	T	C	strelka_germline	0	24	0	24	intronic	Cdk8	.	.
+chr5	146261080	146261080	C	A	strelka_germline	0	24	0	24	intronic	Cdk8	.	.
+chr6	11900410	11900411	CA	C	strelka_germline	16	26	16	26	UTR3	Ndufa4	.	.
+chr6	52766298	52766298	T	G	strelka_germline	4	4	4	4	UTR3	Tax1bp1	.	.
+chr6	117174912	117174912	T	C	strelka_germline	10	6	10	6	UTR3	Cxcl12	.	.
+chr7	116332408	116332408	A	C	strelka_germline	6	4	6	4	exonic	Rps13	synonymous SNV	Rps13:NM_026533:exon5:c.T393G:p.T131T
+chr8	33698075	33698076	GT	G	strelka_germline	6	6	6	6	UTR3	Gsr	.	.
+chr8	46207271	46207271	T	C	strelka_germline	4	4	4	4	UTR3	Slc25a4	.	.
+chr8	122424818	122424819	TG	T	strelka_germline	8	8	8	8	UTR3	Cyba	.	.
+chr8	125721804	125721804	G	A	strelka_germline	4	4	4	4	intergenic	Map10;Ntpcr	.	.
+chr9	77794324	77794326	AAT	A	strelka_germline	14	6	14	6	UTR3	Gclc	.	.
+chr9	106452671	106452671	A	G	strelka_germline	4	4	4	4	UTR3	Abhd14b	.	.
+chr9	108303077	108303077	A	C	strelka_germline	6	4	6	4	UTR3	Tcta	.	.
+chr9	120574160	120574160	C	CA	strelka_germline	6	6	6	6	exonic	Rpl14	frameshift substitution	Rpl14:NM_025974:exon6:c.420delinsCA:p.A143Sfs*18
+chrM	832	832	A	G	strelka_germline	4	4	4	4	intergenic	NONE;NONE	.	.
+chrM	3707	3707	G	A	strelka_germline	6	6	6	6	intergenic	NONE;NONE	.	.
+chrM	15112	15112	T	C	strelka_germline	50	18	50	18	intergenic	NONE;NONE	.	.

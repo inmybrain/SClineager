@@ -576,18 +576,26 @@ single cells. Nat. Methods 16, 409–412.
 To cite this package, please use this bibtex format:
 
 ``` latex
-@article{Lu:2021,
-    title = "Overcoming Expressional Drop-outs in Lineage Reconstruction from Single-Cell RNA-Sequencing Data",
-    journal = "Cell Reports",
-    volume = "34",
-    number = "1",
-    pages = "108589",
-    year = "2021",
-    issn = "2211-1247",
-    doi = "https://doi.org/10.1016/j.celrep.2020.108589",
-    url = "http://www.sciencedirect.com/science/article/pii/S2211124720315783",
-    author = "Tianshi Lu and Seongoh Park and James Zhu and Yunguan Wang and Xiaowei Zhan and Xinlei Wang and Li Wang and Hao Zhu and Tao Wang",
-    keywords = "scRNA-seq, lineage tracing, drop-out, genetics"
+@article{Park:2019,
+    author = { Seongoh   Park  and  Hyejeong   Choi  and  Minjung   Kwak and Johan   Lim},
+    title = {Clustering of longitudinal interval-valued data via mixture distribution under covariance separability},
+    journal = {Journal of Applied Statistics},
+    volume = {47},
+    number = {10},
+    pages = {1739-1756},
+    year  = {2020},
+    publisher = {Taylor & Francis},
+    doi = {10.1080/02664763.2019.1692795},
+    
+    URL = { 
+    https://doi.org/10.1080/02664763.2019.1692795
+    
+    },
+    eprint = { 
+    https://doi.org/10.1080/02664763.2019.1692795
+    
+    }
+    
 }
 ```
 
